@@ -4,12 +4,14 @@ public class Student {
     private String name;
     private int age;
     private String id;
+    private int score;
 
     // 构造方法
-    public Student(String id, String name, int age) {
+    public Student(String id, String name, int age, int score) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.score = score;
     }
 
     // getter/setter
@@ -37,8 +39,16 @@ public class Student {
         this.age = age;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
     @Override
     public String toString() {
-        return id + " | " + name + " | " + age;
+        return id + " | " + name + " | " + age + "|" + score;
     }
 }
